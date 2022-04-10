@@ -11,3 +11,5 @@ Essential places include:
 - Health related (Urgent care, hospitals)
 - Parks
 - Pharmacies
+
+Download all three files in the same place. No need for a webserver, just internet connection.
