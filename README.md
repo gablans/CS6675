@@ -13,3 +13,7 @@ Essential places include:
 - Pharmacies
 
 Download all three files in the same place. No need for a webserver, just internet connection.
+
+** Code included in this repo cannot be copied and used for any Georgia Tech Institute of Technology courses **
+
+You can find all information for implementation @ Google Cloud / Search Platform website.
