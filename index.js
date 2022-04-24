@@ -102,6 +102,24 @@ function initMap() {
   
         addPlaces(results, map);
         console.log(newPlace); 
+
+        var axios = require('axios');
+
+        var config = {
+        method: 'get',
+        url: 'https://maps.googleapis.com/maps/api/distancematrix/json?origins=849VCWC8%2BR9&destinations=San%20Francisco&key=AIzaSyAoN8vmKBOX3FBZa11SmVMp3dll8ClMS1Y',
+        headers: { }
+        };
+
+        axios(config)
+        .then(function (response) {
+          console.log(JSON.stringify(response.data));
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+
+
         moreButton.disabled = !pagination || !pagination.hasNextPage;
         if (pagination && pagination.hasNextPage) {
           getNextPage = () => {
