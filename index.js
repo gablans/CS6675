@@ -96,7 +96,7 @@ function initMap() {
   
     // Perform a nearby search.
     let mytype = "gas_station|supermarket"
-    service.nearbySearch(
+    service.findPlaceFromQuery( //nearbySearch
       { location: newPlace, radius: 1000, type: ['gas_station'] },
       (results, status, pagination) => { 
         if (status !== "OK" || !results) return;
