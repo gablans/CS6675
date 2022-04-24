@@ -96,11 +96,11 @@ function initMap() {
   
     // Perform a nearby search.
     service.nearbySearch(
-      { location: newPlace, radius: 1000, type: ['gas_station'] },
+      { location: newPlace, radius: 1000, type: ['supermarket'] },
       (results, status, pagination) => { 
         if (status !== "OK" || !results) return;
   
-        addPlaces(results[0], map);
+        addPlaces(results, map);
         console.log(newPlace); 
         moreButton.disabled = !pagination || !pagination.hasNextPage;
         if (pagination && pagination.hasNextPage) {
