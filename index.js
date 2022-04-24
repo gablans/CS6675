@@ -95,13 +95,12 @@ function initMap() {
     };
   
     // Perform a nearby search.
-    let mytype = "gas_station|supermarket"
-    service.findPlaceFromQuery( //nearbySearch
+    service.nearbySearch(
       { location: newPlace, radius: 1000, type: ['gas_station'] },
       (results, status, pagination) => { 
         if (status !== "OK" || !results) return;
   
-        addPlaces(results, map);
+        addPlaces(results[0], map);
         console.log(newPlace); 
         moreButton.disabled = !pagination || !pagination.hasNextPage;
         if (pagination && pagination.hasNextPage) {
